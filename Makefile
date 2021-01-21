@@ -1,4 +1,3 @@
-.PHONY: all clean
 CC = g++
 CPP_FLAGS = -Wall -Werror -Wextra -std=c++14 -O3
 
@@ -10,19 +9,22 @@ TARGETS = $(foreach dir,$(SOURCEDIRS),$(patsubst $(dir)/%.cpp,$(TARGETDIR)/%.out
 
 VPATH = $(SOURCEDIRS)
 
+.PHONY: all
 all: dir $(TARGETS) rename
 
 dir:
 	mkdir -p build
 
+.PHONY: rename
 rename:
-	for file in $(TARGETDIR)/*.out
-	do
-		mv "$file" "${file%%.out}"
+	@for file in $(TARGETDIR)/*.out  ; \
+	do                                 \
+		mv "$$file" "$${file%%.out}" ; \
 	done
 
 $(TARGETDIR)/%.out: %.cpp Makefile
 	$(CC) $(CPP_FLAGS) $< -o $@
 
+.PHONY: clean
 clean:
 	@rm -rf build/
