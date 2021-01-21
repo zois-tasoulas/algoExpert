@@ -1,6 +1,6 @@
 Monday, 28th Decemner 2020
 
-A reposotiory to publish my solutions to the AlgoExpert coding problems.
+A repository to publish my solutions of the AlgoExpert coding problems.
 
 Source code is sorted under directories:
 - `easy`
