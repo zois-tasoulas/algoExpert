@@ -1,5 +1,5 @@
 CC = g++
-CPP_FLAGS = -Wall -Werror -Wextra -std=c++14 -O3
+CPP_FLAGS = -Wall -Werror -Wextra -std=c++14 -pedantic -O3
 
 SOURCEDIRS = easy medium
 TARGETDIR = build
