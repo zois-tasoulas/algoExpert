@@ -5,24 +5,17 @@ SOURCEDIRS = easy medium
 TARGETDIR = build
 
 SOURCES = $(foreach dir,$(SOURCEDIRS),$(wildcard $(dir)/*.cpp))
-TARGETS = $(foreach dir,$(SOURCEDIRS),$(patsubst $(dir)/%.cpp,$(TARGETDIR)/%.out,$(filter $(dir)/%,$(SOURCES))))
+TARGETS = $(foreach dir,$(SOURCEDIRS),$(patsubst $(dir)/%.cpp,$(TARGETDIR)/%,$(filter $(dir)/%,$(SOURCES))))
 
 VPATH = $(SOURCEDIRS)
 
 .PHONY: all
-all: dir $(TARGETS) rename
+all: dir $(TARGETS)
 
 dir:
 	mkdir -p build
 
-.PHONY: rename
-rename:
-	@for file in $(TARGETDIR)/*.out  ; \
-	do                                 \
-		mv "$$file" "$${file%%.out}" ; \
-	done
-
-$(TARGETDIR)/%.out: %.cpp Makefile
+$(TARGETS) : $(TARGETDIR)/% : %.cpp Makefile
 	$(CC) $(CPP_FLAGS) $< -o $@
 
 .PHONY: clean
