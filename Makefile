@@ -12,6 +12,7 @@ VPATH = $(SOURCEDIRS)
 .PHONY: all
 all: dir $(TARGETS)
 
+.PHONY: dir
 dir:
 	mkdir -p build
 
