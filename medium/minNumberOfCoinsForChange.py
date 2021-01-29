@@ -5,21 +5,19 @@ def min_number_of_coins_for_change(denominations, n):
         for amount in range(1, len(amounts)):
             if amount < coin:
                 continue
-            if  amounts[amount - coin] != -1 and \
-                (amounts[amount] == -1 or
-                 amounts[amount] > amounts[amount - coin] + 1):
+            if amounts[amount - coin] != -1 and (
+                amounts[amount] == -1 or amounts[amount] > amounts[amount - coin] + 1
+            ):
 
                 amounts[amount] = amounts[amount - coin] + 1
 
     return amounts[n]
 
 
-
 def main():
     amount = 78
     denominations = [5, 10, 1, 25, 50]
     print(min_number_of_coins_for_change(denominations, amount))
-
 
 
 if __name__ == "__main__":

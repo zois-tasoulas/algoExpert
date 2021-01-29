@@ -13,14 +13,12 @@ def nth_fibonacci(number):
         return fibonacci_sum
 
 
-
 def main():
     print(nth_fibonacci(1))
     print(nth_fibonacci(2))
     print(nth_fibonacci(100))
     print(nth_fibonacci(7))
     print(nth_fibonacci(0))
-
 
 
 if __name__ == "__main__":

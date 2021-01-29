@@ -5,8 +5,6 @@ class Node:
             children = []
         self.children = children
 
-
-
     def depth_first_search(self, nodes_array):
         if nodes_array:
             raise Exception("Non empty list provided")
@@ -24,14 +22,12 @@ class Node:
         return nodes_array
 
 
-
 def main():
-    root = Node('A', [Node('B', [Node('E'), Node('F')]),
-                      Node('C'),
-                      Node('D', [Node('G')])])
+    root = Node(
+        "A", [Node("B", [Node("E"), Node("F")]), Node("C"), Node("D", [Node("G")])]
+    )
     nodes_array = []
     print(root.depth_first_search(nodes_array))
-
 
 
 if __name__ == "__main__":

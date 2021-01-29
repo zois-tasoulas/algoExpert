@@ -12,15 +12,12 @@ def binary_search(array, target):
         else:
             left_boundary = median + 1
 
-
     return index
-
 
 
 def main():
     print(binary_search([1, 2, 3, 4, 5, 6, 7, 8], 12))
     print(binary_search([1, 12, 23, 34, 45, 56, 67, 68], 12))
-
 
 
 if __name__ == "__main__":

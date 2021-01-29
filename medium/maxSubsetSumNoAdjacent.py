@@ -12,11 +12,9 @@ def max_subset_sum_no_adjacent(array):
         return max(max_sums)
 
 
-
 def main():
     array = [1, 2, 3, 4, 5, 6, 7, 8]
     print(max_subset_sum_no_adjacent(array))
-
 
 
 if __name__ == "__main__":

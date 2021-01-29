@@ -11,12 +11,10 @@ def number_of_ways_to_make_change(n, denominations):
     return ways_per_number[n]
 
 
-
 def main():
     n = 11
     denominations = [1, 25, 5, 10]
     print(number_of_ways_to_make_change(n, denominations))
-
 
 
 if __name__ == "__main__":

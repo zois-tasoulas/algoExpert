@@ -19,12 +19,10 @@ def run_length_encoding(string):
     return encoded_string
 
 
-
 def main():
     input_string = "aaasssssDfDDDDDDDDDD"
     encoded_string = run_length_encoding(input_string)
     print(encoded_string)
-
 
 
 if __name__ == "__main__":

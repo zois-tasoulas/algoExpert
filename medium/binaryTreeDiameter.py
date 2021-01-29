@@ -1,19 +1,18 @@
 class BinaryTree:
-    '''
+    """
     value: int
     left: BinaryTree
     right: BinaryTree
-    '''
+    """
+
     def __init__(self, value, left=None, right=None):
         self.value = value
         self.left = left
         self.right = right
 
 
-
 def binary_tree_diameter(root):
     return explore_diameter(root)[0]
-
 
 
 def explore_diameter(root):
@@ -33,7 +32,6 @@ def explore_diameter(root):
     return max(current_diameter, left_diameter, right_diameter), current_height
 
 
-
 def main():
     root = BinaryTree(1)
     root.left = BinaryTree(2)
@@ -42,11 +40,10 @@ def main():
     root.left.left = BinaryTree(4)
     root.left.right = BinaryTree(5)
 
-    root.right.left= BinaryTree(6)
+    root.right.left = BinaryTree(6)
     root.right.right = BinaryTree(7)
 
     print(binary_tree_diameter(root))
-
 
 
 if __name__ == "__main__":

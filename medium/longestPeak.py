@@ -39,11 +39,9 @@ def longest_peak(array):
     return lngst_peak
 
 
-
 def main():
     array = [1, 0, -5, 4, 7, 9, -4, -7, -17, -17, -18, 12]
     print(longest_peak(array))
-
 
 
 if __name__ == "__main__":

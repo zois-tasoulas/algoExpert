@@ -9,11 +9,9 @@ def minimum_waiting_time(array):
     return total_waiting_time
 
 
-
 def main():
     times = [4, 3, 6, 1]
     print(minimum_waiting_time(times))
-
 
 
 if __name__ == "__main__":

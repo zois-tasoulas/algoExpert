@@ -12,7 +12,6 @@ def is_palindrome(string):
     return True
 
 
-
 def main():
     strings = ["abba", "banana", "d", "asdfdsa", "zxcvbxz"]
     for word in strings:
@@ -20,7 +19,6 @@ def main():
             print(word, "is a palindrome")
         else:
             print(word, "is not a palindrome")
-
 
 
 if __name__ == "__main__":

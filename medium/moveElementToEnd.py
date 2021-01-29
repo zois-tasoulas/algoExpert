@@ -4,7 +4,6 @@ def swap(index_1, index_2, array):
     array[index_2] = temp
 
 
-
 def move_element_to_end(array, number):
     if array is None:
         raise Exception("Empty array passed to move_element_to_end")
@@ -26,12 +25,10 @@ def move_element_to_end(array, number):
     return array
 
 
-
 def main():
     array = [4, 5, 1, 12, 0, -23, 45, 6546, -2, 5, 0, 24, -18, 9]
     number = 5
     print(move_element_to_end(array, number))
-
 
 
 if __name__ == "__main__":

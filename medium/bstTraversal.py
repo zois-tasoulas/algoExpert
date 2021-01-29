@@ -1,14 +1,14 @@
 class BST:
-    '''
+    """
     value: int
     left: BST
     right: BST
-    '''
+    """
+
     def __init__(self, value, left=None, right=None):
         self.value = value
         self.left = left
         self.right = right
-
 
 
 def in_order_traverse(root, array):
@@ -20,7 +20,6 @@ def in_order_traverse(root, array):
     in_order_traverse(root.right, array)
 
 
-
 def post_order_traverse(root, array):
     if root is None:
         return
@@ -30,7 +29,6 @@ def post_order_traverse(root, array):
     array.append(root.value)
 
 
-
 def pre_order_traverse(root, array):
     if root is None:
         return
@@ -38,7 +36,6 @@ def pre_order_traverse(root, array):
     array.append(root.value)
     pre_order_traverse(root.left, array)
     pre_order_traverse(root.right, array)
-
 
 
 def main():
@@ -63,7 +60,6 @@ def main():
     pre_order = []
     pre_order_traverse(root, pre_order)
     print(pre_order)
-
 
 
 if __name__ == "__main__":

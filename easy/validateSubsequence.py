@@ -15,7 +15,6 @@ def is_valid_subsequence(array, subarray):
     return True
 
 
-
 def main():
     array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     subarray = [2, 6, 8]
@@ -30,6 +29,5 @@ def main():
         print("The subarray is not a valid subsequence")
 
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

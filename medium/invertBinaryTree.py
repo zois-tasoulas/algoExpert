@@ -1,15 +1,14 @@
 class BinaryTree:
-    '''
+    """
     value: int
     left: BinaryTree
     right: BinaryTree
-    '''
+    """
+
     def __init__(self, value, left=None, right=None):
         self.value = value
         self.left = left
         self.right = right
-
-
 
     def print(self):
         queue = [(self, 0)]
@@ -22,12 +21,11 @@ class BinaryTree:
                 queue.append((queue[0][0].right, queue[0][1] + 1))
             if queue[0][1] != prev_height:
                 print()
-            print(queue[0][0].value, end=' ')
+            print(queue[0][0].value, end=" ")
             prev_height = queue[0][1]
             queue.pop(0)
 
         print()
-
 
 
 def swap_subtrees(root):
@@ -35,7 +33,6 @@ def swap_subtrees(root):
         return
 
     root.left, root.right = root.right, root.left
-
 
 
 def invert_binary_tree(root):
@@ -51,7 +48,6 @@ def invert_binary_tree(root):
         if queue[0].right is not None:
             queue.append(queue[0].right)
         queue.pop(0)
-
 
 
 def main():
@@ -75,7 +71,6 @@ def main():
 
     print("Inverted tree")
     root.print()
-
 
 
 if __name__ == "__main__":

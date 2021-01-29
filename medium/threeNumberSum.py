@@ -21,7 +21,6 @@ def three_number_sum(array, number):
     return solution
 
 
-
 def main():
     number = 8
     array = [1, 0, 6, 2, 5, 3, 4]
@@ -30,7 +29,6 @@ def main():
     array = [1, 0, 2, 3]
     solutions = three_number_sum(array, number)
     print(solutions)
-
 
 
 if __name__ == "__main__":

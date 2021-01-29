@@ -1,16 +1,16 @@
 class BinaryTree:
-    '''
+    """
     value: int
     left: BinaryTree
     right: BinaryTree
     parent: BinaryTree
-    '''
+    """
+
     def __init__(self, value, parent=None, left=None, right=None):
         self.value = value
         self.parent = parent
         self.left = left
         self.right = right
-
 
 
 def traverse_in_order(root, array):
@@ -20,7 +20,6 @@ def traverse_in_order(root, array):
     traverse_in_order(root.left, array)
     array.append(root)
     traverse_in_order(root.right, array)
-
 
 
 def find_successor(root, node):
@@ -39,14 +38,12 @@ def find_successor(root, node):
     return None
 
 
-
 def leftmost_child(root):
     current = root
     while current.left is not None:
         current = current.left
 
     return current
-
 
 
 def rightmost_parent(node):
@@ -66,13 +63,11 @@ def rightmost_parent(node):
     return current_parent
 
 
-
 def find_successor2(root, node):
     if node.right is not None:
         return leftmost_child(node.right)
 
     return rightmost_parent(node)
-
 
 
 def main():
@@ -88,7 +83,6 @@ def main():
     root.right.right = BinaryTree(7, root.right)
 
     print(find_successor2(root, root.left.right))
-
 
 
 if __name__ == "__main__":

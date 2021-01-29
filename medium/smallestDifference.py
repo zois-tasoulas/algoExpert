@@ -19,12 +19,10 @@ def smallest_difference(array_1, array_2):
     return solution
 
 
-
 def main():
     array1 = [-5, -1, -4, 2, -3, -2, 3]
     array2 = [12, 4, 78, -9, 1, 3, -6]
     print(smallest_difference(array1, array2))
-
 
 
 if __name__ == "__main__":
